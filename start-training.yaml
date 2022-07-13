@@ -1,0 +1,11 @@
+pipeline:
+  name: start-training
+description: a pipeline that runs a bash script to start training job on ngc.
+input:
+  pfs:
+    glob: /*
+    repo: deeplearning-training-images
+transform:
+  cmd:
+    - ./startjob.sh
+  image: nvcr.io/nvidian/sae/joliao-start-training-job:1.3
