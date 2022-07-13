@@ -9,3 +9,5 @@ transform:
   cmd:
     - ./startjob.sh
   image: nvcr.io/nvidian/sae/joliao-start-training-job:1.3
+  image_pull_secrets:
+    - nvcr.io
