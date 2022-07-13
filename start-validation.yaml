@@ -1,0 +1,13 @@
+pipeline:
+  name: start-validation
+description: a pipeline that runs a bash script to start validation job on ngc.
+input:
+  pfs:
+    glob: /*
+    repo: start-training
+transform:
+  cmd:
+    - ./startjob.sh
+  image: nvcr.io/nvidian/sae/joliao-validation-job:1.0
+  image_pull_secrets:
+    - nvcr.io
