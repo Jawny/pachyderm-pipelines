@@ -8,7 +8,6 @@ input:
 transform:
   cmd:
     - ./startjob.sh
-    - cd /pfs/out && touch done.txt
   image: nvcr.io/nvidian/sae/joliao-start-training-job:1.4
   image_pull_secrets:
     - nvcr.io
