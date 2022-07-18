@@ -9,6 +9,6 @@ transform:
   cmd:
     - ./startvalidation.sh
     - cd /pfs/out && touch done.txt
-  image: nvcr.io/nvidian/sae/joliao-validation-job:1.2
+  image: nvcr.io/nvidian/sae/joliao-validation-job:1.3
   image_pull_secrets:
     - nvcr.io
