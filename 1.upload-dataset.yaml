@@ -8,6 +8,6 @@ input:
 transform:
   cmd:
     - bash -x ./upload-dataset.sh
-  image: nvcr.io/nvidian/sae/joliao-start-training-job:1.8
+  image: nvcr.io/nvidian/sae/joliao-upload-to-dataset:1.1
   image_pull_secrets:
     - nvcr.io

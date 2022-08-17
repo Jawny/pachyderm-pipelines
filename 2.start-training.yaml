@@ -8,6 +8,6 @@ input:
 transform:
   cmd:
     - bash -x ./startjob.sh
-  image: nvcr.io/nvidian/sae/joliao-start-training-job:1.8
+  image: nvcr.io/nvidian/sae/joliao-start-training-job:1.9
   image_pull_secrets:
     - nvcr.io
