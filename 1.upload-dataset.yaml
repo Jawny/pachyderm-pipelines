@@ -7,8 +7,7 @@ input:
     repo: deeplearning-training-images
 transform:
   cmd:
-    - ls -a
-    - bash -x ./upload-dataset.sh
+    - ["bash -x ./upload-dataset.sh"]
   image: nvcr.io/nvidian/sae/joliao-upload-to-dataset:1.1
   image_pull_secrets:
     - nvcr.io
