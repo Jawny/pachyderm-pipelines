@@ -1,0 +1,13 @@
+pipeline:
+  name: upload-dataset
+description: a pipeline that runs a bash script to upload data from pachyderm repo to a bcp dataset.
+input:
+  pfs:
+    glob: /*
+    repo: deeplearning-training-images
+transform:
+  cmd:
+    - bash -x ./upload-dataset.sh
+  image: nvcr.io/nvidian/sae/joliao-start-training-job:1.8
+  image_pull_secrets:
+    - nvcr.io
