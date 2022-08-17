@@ -4,9 +4,10 @@ description: a pipeline that runs a bash script to upload data from pachyderm re
 input:
   pfs:
     glob: /*
-    repo: upload-dataset
+    repo: deeplearning-training-images
 transform:
   cmd:
+    - ls -a
     - bash -x ./upload-dataset.sh
   image: nvcr.io/nvidian/sae/joliao-upload-to-dataset:1.1
   image_pull_secrets:
