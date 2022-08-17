@@ -4,7 +4,7 @@ description: a pipeline that runs a bash script to upload data from pachyderm re
 input:
   pfs:
     glob: /*
-    repo: deeplearning-training-images
+    repo: upload-dataset
 transform:
   cmd:
     - bash -x ./upload-dataset.sh
