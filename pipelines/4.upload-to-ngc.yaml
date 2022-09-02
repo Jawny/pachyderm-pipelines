@@ -1,0 +1,13 @@
+pipeline:
+  name: upload-to-ngc
+description: a pipeline that runs a bash script to upload results to ngc.
+input:
+  pfs:
+    glob: /*
+    repo: start-training
+transform:
+  cmd: ['/bin/bash']
+  stdin: ['bash -x ./upload-to-ngc.sh']
+  image: nvcr.io/nvidian/sae/joliao-upload-ngc:1.4
+  image_pull_secrets:
+    - nvcr.io

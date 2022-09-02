@@ -1,0 +1,13 @@
+pipeline:
+  name: start-training
+description: a pipeline that runs a bash script to start training job on ngc.
+input:
+  pfs:
+    glob: /*
+    repo: upload-dataset
+transform:
+  cmd: ['/bin/sh']
+  stdin: ['bash -x ./startjob.sh']
+  image: nvcr.io/nvidian/sae/joliao-start-training-job:2.7
+  image_pull_secrets:
+    - nvcr.io
