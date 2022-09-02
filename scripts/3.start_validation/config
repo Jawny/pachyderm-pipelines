@@ -1,0 +1,7 @@
+[CURRENT]
+apikey = API_KEY 
+format_type = ascii
+org = ORG
+command_map = {"apikey": "API_KEY", "commands": ["model", "diag", "application", "result", "collection", "fleet-command", "label-set", "alert", "registry", "dataset", "location", "chart", "component", "settings", "user", "log", "appconfig", "apikey", "resource", "batch", "ace", "deployment", "image", "org", "usage", "workspace", "audit", "team"]}
+team = TEAM
+ace = ACE
